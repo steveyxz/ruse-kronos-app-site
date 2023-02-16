@@ -1,0 +1,247 @@
+.styled {
+  transition: font 0.2s ease-in, color 0.2s ease-in;
+  color: rgb(73, 78, 84);
+  font: 5em Quicksand, Helvetica, sans-serif;
+  text-align: center;
+  font-weight: bolder;
+  margin-top: 0;
+  margin-bottom: 0;
+  opacity: 100%;
+  animation: ease-in 2s 0s 1 forwards drift-in-top;
+  cursor: pointer;
+  text-underline-mode: none;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.styled:hover {
+  font: 5.5em Quicksand, Helvetica, sans-serif;
+  font-weight: bolder;
+  color: #696e74;
+  transition: font 0.2s ease-in, color 0.2s ease-in;
+}
+
+@keyframes drift-in-top {
+  from {
+    transform: translateY(-500%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.title-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+.typewriter {
+  padding: 0;
+  position: relative;
+  font: 1em monospace, Courier, sans-serif;
+  display: inline-block;
+  margin: 0 auto;
+  top: 1%;
+}
+
+.typewriter-text {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typewriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .04em; /* Adjust as needed */
+  animation: typing 6s steps(20, end),
+  blink .75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+  20% {
+    width: 100%
+  }
+  50% {
+    width: 100%
+  }
+  70% {
+    width: 0
+  }
+  to {
+    width: 0
+  }
+}
+
+@keyframes blink {
+  from, to {
+    border-color: transparent
+  }
+  50% {
+    border-color: #BFB9BD;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(95, 195, 190);
+  animation: 1s ease-in 0s 1 forwards opacity-rift;
+  text-align: center;
+  user-select: none;
+}
+
+@keyframes opacity-rift {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.scroll-prompt {
+  display: inline-block;
+  position: absolute;
+  bottom: 5%;
+}
+
+.scroll-prompt-text {
+  color: #494E54;
+  font: 1em Quicksand, Helvetica, sans-serif;
+}
+
+.scroll-image {
+  height: 30px;
+  width: 30px;
+  animation: 1s cubic-bezier(.5, .5, .5, .5) 0s infinite forwards scroll-prompt-wobble;
+}
+
+@keyframes scroll-prompt-wobble {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(-2px);
+  }
+  70% {
+    transform: translateY(0);
+  }
+}
+
+.scroll-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.section {
+  opacity: 0;
+  transform: translateY(-150%);
+  transition: opacity 0.5s ease-in, transform 1s ease-in;
+}
+
+.shown {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: opacity 0.5s ease-in, transform 1s ease-in;
+  display: flex;
+}
+
+.particle {
+  z-index: -1;
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background-color: #C0CD4E;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  animation: 12s linear 0s infinite forwards rain;
+}
+
+@keyframes rain {
+  from {
+    transform: translate(0, 0);
+  }
+
+  30% {
+    transform: translate(0, 15em);
+  }
+
+  60% {
+    transform: translate(0, 30em);
+  }
+
+  90% {
+    transform: translate(0, 45em);
+  }
+  to {
+    transform: translate(0, 60em);
+  }
+}
+
+.fake-scroll {
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+
+.download-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.download-page-header-text {
+  font: 2.5em Quicksand, Helvetica, sans-serif;
+  color: #494E54;
+  font-weight: bolder;
+}
+
+.download-page-content-text {
+  font: 1.5em Quicksand, Helvetica, sans-serif;
+  color: #494E54;
+}
+
+.download-button {
+  font: 2em Quicksand, Helvetica, sans-serif;
+  color: #999999;
+  background-color: #494E54;
+  border: none;
+  cursor: pointer;
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 100%;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+body::-webkit-scrollbar { width: 0 !important }
+
