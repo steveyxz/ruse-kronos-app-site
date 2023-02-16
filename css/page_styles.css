@@ -6,10 +6,9 @@
   font-weight: bolder;
   margin-top: 0;
   margin-bottom: 0;
-  opacity: 100%;
+  opacity: 1;
   animation: ease-in 2s 0s 1 forwards drift-in-top;
   cursor: pointer;
-  text-underline-mode: none;
 }
 
 .link {
