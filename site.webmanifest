@@ -2,7 +2,7 @@
   "short_name": "",
   "name": "",
   "icons": [{
-    "src": "icons/icon.svg",
+    "src": "icons/logo.svg",
     "sizes": "any"
   }],
   "start_url": "/?utm_source=homescreen",
